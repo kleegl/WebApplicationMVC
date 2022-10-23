@@ -1,0 +1,14 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title>Layout Company</title>
+</head>
+<body>
+    <div>
+        <a asp-controller="Home" asp-action="Index">Home Index</a> |
+        <a asp-controller="Company" asp-action="ShowAll">Show All Companies</a> |
+        <a asp-controller="Company" asp-action="Create">Create</a>
+    </div>
+    @RenderBody()
+</body>
+</html>

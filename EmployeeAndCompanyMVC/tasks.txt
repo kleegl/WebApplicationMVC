@@ -1,0 +1,4 @@
+﻿1. crud for Company model
+2. crud for Employee model
+3. ViewModel
+

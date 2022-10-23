@@ -1,0 +1,54 @@
+﻿@using EmployeeAndCompanyMVC.ViewModels;
+@using EmployeeAndCompanyMVC.Models;
+@model EmployeeAndCompanyMVC.ViewModels.EmployeeCompanyViewModel;
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Create</title>
+</head>
+<body>
+    <h2>Create New Employee</h2>
+    @*<table>
+        <tr>
+            <td>name</td>
+            <td>country</td>
+        </tr>
+        @foreach (var comp in Model.CompanyViewModel)
+        {
+            <tr>
+                <td>@comp.Name</td>
+                <td>@comp.Country</td>
+            </tr>
+        }
+    </table>*@
+
+    <form asp-controller="Employee" asp-action="Create" method="post">
+        <label asp-for="EmployeeVM.Name"></label>
+        <input type="text" name="Name" value="" />
+        <br />
+
+        <label asp-for="EmployeeVM.Age"></label>
+        <input type="number" name="Age" value="" />
+        <br />
+
+        <label asp-for="EmployeeVM.WorkType"></label>
+        <select asp-for="EmployeeVM.WorkType" asp-items="Html.GetEnumSelectList<WorkType>()">
+            <option></option>
+        </select>
+        <br />
+
+        <label asp-for="EmployeeVM.Job"></label>
+        <select asp-for="EmployeeVM.Job">
+            @foreach (Company company in Model.CompanyViewModel)
+            {
+                <option value="@company.Name">@company.Name</option>
+            }
+        </select>
+        <br />
+
+        <input type="submit" value="Создать" />
+
+    </form>
+</body>
+</html>
