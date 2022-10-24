@@ -1,0 +1,18 @@
+﻿<!DOCTYPE html>
+@model Employee;
+
+<html>
+<head>
+    <title>EnumPage</title>
+</head>
+<body>
+    <h2>Enum Page</h2>
+    <form  asp-controller="Employee" asp-action="EnumPage" method="post">
+        <label asp-for="WorkType"></label>
+        <select asp-for="WorkType" asp-items="Html.GetEnumSelectList<WorkType>()">
+            <option></option>
+        </select>
+        <input type="submit" value="Send" />
+    </form>
+</body>
+</html>

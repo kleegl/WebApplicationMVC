@@ -9,5 +9,6 @@ namespace EmployeeAndCompanyMVC.Repositories
         public void Create(Company company);
         public void Update(Company company);
         public void Delete(int? id);
+        public Company GetCompanyByName(string? name);
     }
 }

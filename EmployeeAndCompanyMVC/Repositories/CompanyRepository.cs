@@ -62,5 +62,18 @@ namespace EmployeeAndCompanyMVC.Repositories
                 throw;
             }
         }
+
+        public Company GetCompanyByName(string? name)
+        {
+            try
+            {
+                Company company = _context.Companies.FirstOrDefault(c => c.Name == name);
+                return company;
+            }
+            catch (Exception)
+            {
+                throw;
+            }
+        }
     }
 }

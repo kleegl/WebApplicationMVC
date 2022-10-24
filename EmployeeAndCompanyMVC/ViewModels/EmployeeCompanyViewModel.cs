@@ -11,7 +11,12 @@ namespace EmployeeAndCompanyMVC.ViewModels
         public IEnumerable<Employee> EmployeeViewModel { get; set; } = new List<Employee>();
         public IEnumerable<Company> CompanyViewModel { get; set; } = new List<Company>();
         public Employee EmployeeVM { get; set; }
+        public Company CompanyVM { get; set; }
 
+        public EmployeeCompanyViewModel()
+        {
+
+        }
         public EmployeeCompanyViewModel(ICompanyRepository repository, IEmployeeRepository employeeRepository)
         {
             _companyRepository = repository;
