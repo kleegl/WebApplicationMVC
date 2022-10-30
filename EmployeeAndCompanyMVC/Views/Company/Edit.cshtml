@@ -8,9 +8,6 @@
 <body>
     <h2>Edit Company Page</h2>
     <form asp-controller="Company" asp-action="Edit" method="post">
-        <label asp-for="Id"></label>
-        <label asp-for="Id">@Model.Id</label>
-        <br />
 
         <label asp-for="Name"></label>
         <input type="text" name="Name" value=@Model.Name />

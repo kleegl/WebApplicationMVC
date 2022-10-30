@@ -27,9 +27,18 @@ namespace EmployeeAndCompanyMVC.Repositories
             throw new NotImplementedException();
         }
 
-        public void Edit(int? id)
+        public void Edit(Employee employee)
         {
-            throw new NotImplementedException();
+            try
+            {
+                _context.Employees.Update(employee);
+                _context.SaveChanges();
+            }
+            catch (Exception)
+            {
+
+                throw;
+            }
         }
 
         public Employee GetEmployeeById(int? id)

@@ -7,7 +7,7 @@ namespace EmployeeAndCompanyMVC.Repositories
         public List<Employee> ShowAll();
         public Employee GetEmployeeById(int? id);
         public void Create(Employee employee);
-        public void Edit(int? id);
+        public void Edit(Employee employee);
         public void Delete(int? id);
     }
 }

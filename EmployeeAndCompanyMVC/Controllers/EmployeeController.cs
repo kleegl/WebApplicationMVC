@@ -34,6 +34,18 @@ namespace EmployeeAndCompanyMVC.Controllers
         }
 
         [HttpGet]
+        public IActionResult Edit(int? id) => View();
+
+        [HttpPost]
+        public IActionResult Edit(Employee employee, string companyName)
+        {
+            employee.Job = _companyRepository.GetCompanyByName(companyName);
+            _employeeRepository.Edit(employee);
+            return RedirectToAction("ShowAll");
+        }
+
+
+        [HttpGet]
         public IActionResult EnumPage() => View();
         [HttpPost]
         public IActionResult EnumPage(Employee emp) => RedirectToAction("Index");

@@ -16,10 +16,12 @@
         </tr>
         @foreach (var employee in Model)
         {
-            <td>@employee.Name</td>
-            <td>@employee.Age</td>
-            <td>@employee.WorkType</td>
-            <td>@employee.Job.Name</td>
+            <tr>
+                <td>@employee.Name</td>
+                <td>@employee.Age</td>
+                <td>@employee.WorkType</td>
+                <td>@employee.Job.Name</td>
+            </tr>
         }
     </table>
 </body>
